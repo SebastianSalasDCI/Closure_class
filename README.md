@@ -24,7 +24,7 @@ dansRoll(); //Second time
 * b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What changes?
 * c. What is the lexical scope of `newRoll`? 
 
-3. **Scope Questions**: Read the following code snippets, analyse them and answer the questions:
+3. Read the following code snippets, analyse them and answer the questions:
 
 * a. What will you see in the console for the following example?
 ```js
@@ -102,7 +102,7 @@ var result = firstResult(2);
 console.log(result) 
 ```
 
-5. Write a code that would allow you to do this using a closure.
+4. Write a code that would allow you to do this using a closure.
 
 ```js
 const addSix = createBase(6);
