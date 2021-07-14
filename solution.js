@@ -1,4 +1,4 @@
-/* /* //Solution exercise 4.
+/* /* /* //Solution exercise 4.
 -----------Q1---------------
 //===>Closure is a concept used when an inner function has always access to the variables has been created in the outer function even after the outer function has executed.
 
@@ -39,13 +39,15 @@ console.log(result());
 
 ------e-----------//output=20 
 ------f-----//output=5
-------------Q4-----------
+------------Q4----------- */
 
-function createBase (a) {
+function createBase(a) {
+    let result=a;
     function otherFn(b) {
-         console.log(a+b); 
+       
+        console.log(result+=b);
     }
-  return otherFn;
+    return otherFn;
 }
 const addSix = createBase(6);
 const addTwelve = createBase(12);
