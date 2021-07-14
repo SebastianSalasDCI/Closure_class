@@ -102,7 +102,7 @@ var result = firstResult(2);
 console.log(result) 
 ```
 
-4. Write a code that would allow you to do this using a closure.
+4. Write a code that would allows you to do this using a closure.
 
 ```js
 const addSix = createBase(6);
@@ -111,3 +111,14 @@ addSix(10); // returns 16
 addTwelve(20); // returns 32
 ```
 
+5. *Challenge Exercise* Write a code that would allows you to do this using a closure.
+```js
+const myTodoList = createTodoList("Sebastian");
+myTodoList.addTodo("Send letters") // returns message "todo Added"
+myTodoList.addTodo("Learn more javascript")// returns message "todo Added"
+myTodoList.showTodos() //returns message: "Sebastian Todos are: Send letters,  Learn more javascript"
+myTodoList.deleteTodo("Send letters") //returns "todo:Send letters deleted"
+myTodoList.showTodos() //returns message: "Sebastian Todos are: Learn more javascript"
+myTodoList.addTodo("Finish exercises about closure")// returns message "todo Added"
+myTodoList.showTodos() //returns message: "Sebastian Todos are: Learn more javascript, Finish exercises about closure"
+```
