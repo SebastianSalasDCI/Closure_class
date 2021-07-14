@@ -1,23 +1,30 @@
 /* /* //Solution exercise 4.
-//Q1
+-----------Q1---------------
 //===>Closure is a concept used when an inner function has always access to the variables has been created in the outer function even after the outer function has executed.
 
-//Q2
+-------------Q2----------------
 
-a// the close is in the line 17
-b////dansRoll(); //First time ==>'Dan rolled a (num between 1 and 6)'
+----------a------- the close is in the line 17(const dansRoll = personalDice("Dan");)
+
+-------b----------dansRoll(); //First time 
+
+==>'Dan rolled a (num between 1 and 6)'
 //dansRoll(); //Second time==>'Dan rolled a (num between 1 and 6)'
 //here the param is always the same and the random number should change in every call
 c//the lexical scope is in the line 9 (let name = param;)
 
-//Q3
-a//b(); ==> output=nothing;
+-----------------Q3----------
+
+---------a------------//b(); ==> output=nothing;
   //console.log(a); ==>  output=10;
-b//b(); ==> output=nothing;
+
+-------b-------//b(); ==> output=nothing;
   //console.log(a); ==>  nothing since a is local variable it can be accessed only via the b() function it is considered as undefined outside the function itself;
-c//30 */
-//d// we should return the function as variable without ().the we should call the result as a function with console log to print the result see following modifications: */
-/* function b() { 
+-------c-------30
+
+-----d------ we should return the function as variable without ().the we should call the result as a function with console log to print the result see following modifications: 
+
+function b() { 
     let a = 10; 
     
     function c() {
@@ -30,9 +37,9 @@ c//30 */
 const result = b();  
 console.log(result()); 
 
-e//20 */
-//f//5
-//Q4
+------e-----------//output=20 
+------f-----//output=5
+------------Q4-----------
 
 function createBase (a) {
     function otherFn(b) {
