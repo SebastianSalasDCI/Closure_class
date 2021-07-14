@@ -34,7 +34,9 @@
 
 // 3. Read the following code snippets, analyse them and answer the questions:
 
-// * a. What will you see in the console for the following example?   -   1
+// * a. What will you see in the console for the following example?
+
+// It will be 10, we overwrite it by function execution.
 
 // let a = 1;
 // function b() {
