@@ -2,6 +2,9 @@
 ### Closure
 
 1. In your own words, define closure (1-2 sentences).
+
+Closures are functions with free and independent variables.  the function declared in the closure will remind the lexical environment in which it was created. In other words: inner functions have access to variables of outer functions.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -16,13 +19,18 @@ function personalDice(param){
 
 const dansRoll = personalDice("Dan");
 
-dansRoll(); //First time
-dansRoll(); //Second time
+dansRoll(); //First time output: "Dan rolled a 'random number between 0 and 5'"
+dansRoll(); //Second time output: "Dan rolled a 'random number between 0 and 5'"
 ```
 
 * a. Where is closure used in this code? How can you tell?
+from line 12 to 16. it has a variable, a function and a call
+
 * b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What changes?
+the only thing changing is the random number! 
+
 * c. What is the lexical scope of `newRoll`? 
+the variable name, coz it's passed to the outer function
 
 3. Read the following code snippets, analyse them and answer the questions:
 
@@ -35,7 +43,7 @@ function b() {
     
 } 
 b(); 
-console.log(a);    
+console.log(a);    // 10
 ```
 
 * b. What will you see in the console for the following example?
@@ -46,7 +54,7 @@ function b() {
     
 }
 b();
-console.log(a);    
+console.log(a);    // a is not defined!
 ```
 
 * c. What will you see in the console for the following example? 
@@ -62,9 +70,10 @@ function b() {
     
 }
 const result = b();  
-console.log(result);    
+console.log(result);    // 30
 ```
 * d. What will you change so result is a closure? 
+remove the parenthesis from line 69 and put to the result-function in line 73 console.log(result());  
 * e. What will you see in the console for the following example? 
 ```js
 let a = 50;
@@ -80,7 +89,7 @@ function b() {
     
 }
 const result = b();  
-console.log(result.getA());     
+console.log(result.getA());      // 20
 ```
 
 * f. What will you see in the console for the following example?
@@ -99,7 +108,7 @@ function someFunction(number) {
 
 var firstResult = someFunction(9);
 var result = firstResult(2);
-console.log(result) 
+console.log(result) // 5
 ```
 
 4. Write a code that would allow you to do this using a closure.
@@ -110,5 +119,4 @@ const addTwelve = createBase(12);
 addSix(10); // returns 16
 addTwelve(20); // returns 32
 ```
-
 
